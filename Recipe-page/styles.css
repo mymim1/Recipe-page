@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Stone100: hsl(30, 54%, 90%);
+  --Stone150: hsl(30, 18%, 87%);
+  --Stone600: hsl(30, 10%, 34%);
+  --Stone900: hsl(24, 5%, 18%);
+  --Brown800: hsl(14, 45%, 36%);
+  --Rose800: hsl(332, 51%, 32%);
+  --Rose50: hsl(330, 100%, 98%);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: var(--Stone100);
+  padding: 2rem 1rem;
+}
+
+.container {
+  padding-inline: 2.5rem;
+  padding-block: 1.75rem;
+  background: var(--White);
+  border-radius: 1.5rem;
+  width: 46rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 1.5rem;
+}
+h1,
+h2 {
+  font-family: "Young serif";
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 100%;
+  color: var(--Brown800);
+  margin-bottom: 1.5rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+header h1 {
+  padding-inline-start: 0;
+  font-size: 40px;
+  line-height: 100%;
+  color: var(--Stone900);
+}
+
+.description,
+.description-list {
+  font-family: "Outfit";
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--Stone600);
+  line-height: 150%;
+}
+
+.description-list {
+  padding-left: 1rem;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2.5rem;
+  gap: 2.5rem;
+}
+
+.instructions::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--Stone150);
+  display: inline-block;
+  margin-bottom: 1.875rem;
+}
+
+.instructions::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--Stone150);
+  display: inline-block;
+  margin-top: 2.5rem;
+}
+
+.preparation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5rem;
+  gap: 1rem;
+  width: 100%;
+  background: var(--Rose50);
+  border-radius: 0.75rem;
+}
+
+.preparation-title {
+  font-family: "Outfit";
+  font-size: 20px;
+  color: var(--Rose800);
+  font-weight: 600;
+  line-height: 100%;
+}
+
+.preparation-list,
+.ingredients-list,
+.instructions-list {
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.preparation-list li::marker {
+  font-weight: 700;
+  color: var(--Rose800);
+}
+.ingredients-list li::marker,
+.instructions-list li::marker {
+  font-weight: 700;
+  color: var(--Brown800);
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+table {
+  width: 100%;
+  margin-block-start: 0.75rem;
+  border-collapse: collapse;
+}
+
+td {
+  padding-inline-start: 2rem;
+}
+
+tr:not(:last-child) {
+  border-bottom: 1px solid var(--Stone150);
+}
+
+td {
+  padding-block-end: 0.75rem;
+  padding-block-start: 0.75rem;
+}
+
+td strong {
+  color: var(--Brown800);
+}
+
+@media screen and (max-width: 37.5rem) {
+  body {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .container {
+    min-height: 100vh;
+    width: 100%;
+    padding: 0;
+    background-color: var(--White);
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+    border-radius: 0;
+  }
+
+  .text-content {
+    padding: 2rem;
+    margin-block-start: 1rem;
+  }
+
+  .instructions::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--Stone150);
+    display: inline-block;
+    margin-bottom: 1.875rem;
+  }
+
+  .instructions::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--Stone150);
+    display: inline-block;
+    margin-top: 2.5rem;
+  }
+
+  header h1 {
+    padding: 0;
+    font-size: 32px;
+  }
+}
